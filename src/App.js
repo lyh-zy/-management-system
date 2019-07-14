@@ -3,9 +3,9 @@
  */
 import React, {Component} from 'react'
 import {Button, message} from 'antd'
-/*
-应用根组件
- */
+import { BrowserRouter,hashRouter,switch,Route} from "react-router-dom"
+
+
 class App extends Component {
 
   handleClick = () => {
@@ -14,7 +14,7 @@ class App extends Component {
 
   render() {
     return (
-      <Button type='primary' onClick={this.handleClick}>学习</Button>
+     <hashRouter></hashRouter>
     )
   }
 }
