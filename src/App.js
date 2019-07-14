@@ -6,7 +6,7 @@ import {Button, message} from 'antd'
 import { BrowserRouter, hashRouter, Switch,Route} from "react-router-dom"
 
 import login from './pages/login/login.jsx'
-import Admin './pages/admin/admin.jsx'
+import Admin from './pages/admin/admin.jsx'
 
 class App extends Component {
 
@@ -18,7 +18,10 @@ class App extends Component {
     return (
      <hashRouter>
        <switch>
-         <Route path="" />
+         <Route path="" component={login}/>
+         <Route path="" component={Admin
+        }/>
+         
        </switch>
      </hashRouter>
     )
