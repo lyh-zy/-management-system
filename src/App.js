@@ -3,8 +3,10 @@
  */
 import React, {Component} from 'react'
 import {Button, message} from 'antd'
-import { BrowserRouter,hashRouter,switch,Route} from "react-router-dom"
+import { BrowserRouter, hashRouter, Switch,Route} from "react-router-dom"
 
+import login from './pages/login/login.jsx';
+import  Admin './pages/admin/admin.jsx';
 
 class App extends Component {
 
@@ -14,7 +16,11 @@ class App extends Component {
 
   render() {
     return (
-     <hashRouter></hashRouter>
+     <hashRouter>
+       <switch>
+         <Route path="" />
+       </switch>
+     </hashRouter>
     )
   }
 }
