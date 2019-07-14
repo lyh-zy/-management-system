@@ -5,8 +5,8 @@ import React, {Component} from 'react'
 import {Button, message} from 'antd'
 import { BrowserRouter, hashRouter, Switch,Route} from "react-router-dom"
 
-import login from './pages/login/login.jsx';
-import  Admin './pages/admin/admin.jsx';
+import login from './pages/login/login.jsx'
+import Admin './pages/admin/admin.jsx'
 
 class App extends Component {
 
