@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import "./login.less"
+import "./login.less";
 import logo from "./images/logo.png";
 export default class Login extends Component {
     render() {

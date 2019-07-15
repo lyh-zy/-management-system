@@ -1,13 +1,13 @@
+import React, {Component} from 'react'
+import {Button, message} from 'antd'
+import { BrowserRouter, HashRouter, Switch,Route} from "react-router-dom"
+
+import Login from './pages/login/login.jsx'
+import Admin from './pages/admin/admin.jsx'
+
 /**
  * 应用根组件
  */
-import React, {Component} from 'react'
-import {Button, message} from 'antd'
-import { BrowserRouter, hashRouter, Switch,Route} from "react-router-dom"
-
-import login from './pages/login/login.jsx'
-import Admin from './pages/admin/admin.jsx'
-
 class App extends Component {
 
   handleClick = () => {
@@ -16,14 +16,12 @@ class App extends Component {
 
   render() {
     return (
-     <hashRouter>
-       <switch>
-         <Route path="" component={login}/>
-         <Route path="" component={Admin
-        }/>
-         
-       </switch>
-     </hashRouter>
+     <HashRouter>
+       <Switch>
+         <Route path="/login" component={Login}/>
+         <Route path="/admin" component={Admin}/>
+       </Switch>
+     </HashRouter>
     )
   }
 }
