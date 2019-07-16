@@ -3,6 +3,12 @@ import { Redirect } from 'react-router-dom'
 
 import memoryUtils from '../../utils/memoryUtils'
 
+import { Layout } from 'antd';
+import LeftNav from '../../components/left-nav'
+import Header from '../../components/header'
+
+const {Footer, Sider, Content } = Layout;
+
 export default class Admin extends Component {
     render() {
 
@@ -14,9 +20,18 @@ export default class Admin extends Component {
         }
 
         return (
-            <div>
-                hello, {user.username}
-            </div>
+            
+                <Layout style={{ height:'100%' }}>
+                    <Sider>
+                        <LeftNav/>
+                    </Sider>
+                    <Layout>
+                        <Header/>
+                        <Content>Content</Content>
+                        <Footer>Footer</Footer>
+                    </Layout>
+                </Layout>
+    
         )
     }
 }
