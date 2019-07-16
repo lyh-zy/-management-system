@@ -1,13 +1,7 @@
 import React, { Component } from 'react'
-import { Redirect,Switch,Route} from 'react-router-dom'
-
-import { Layout } from 'antd';
-
+import { Redirect } from 'react-router-dom'
 
 import memoryUtils from '../../utils/memoryUtils'
-
-import Left from "../../components/left-nav"
-import header from "../../components/header"
 
 export default class Admin extends Component {
     render() {
@@ -21,15 +15,8 @@ export default class Admin extends Component {
 
         return (
             <div>
-                <Layout style={{ height: '100%' }}>
-                    <Sider>Sider</Sider>
-                    <Layout>
-                        <Header>Header</Header>
-                        <Content style={{ backgroundColor: 'white' }}>Content</Content>
-                        <Footer style={{ textAlign: 'center', color: '#aaaaaa'}}>Footer</Footer>
-                    </Layout>
-                </Layout>
-            </div> 
+                hello, {user.username}
+            </div>
         )
     }
 }
