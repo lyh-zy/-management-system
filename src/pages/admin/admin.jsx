@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
+import { Layout } from 'antd';
 
 import memoryUtils from '../../utils/memoryUtils'
 
-import { Layout } from 'antd';
+
 import LeftNav from '../../components/left-nav'
 import Header from '../../components/header'
 
