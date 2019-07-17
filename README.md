@@ -50,8 +50,7 @@
         下载工具包
         config-overrides.js
     使用antd的组件
-        根据antd的文档编写
-        
+        根据antd的文档编写 
 ## 6. 引入路由
     下载包: react-router-dom
     拆分应用路由:
@@ -61,7 +60,6 @@
       <BrowserRouter> / <HashRouter>
       <Switch>
       <Route path='' component={}/>
-      
 ## 7. Login的静态组件
     1). 自定义了一部分样式布局
     2). 使用antd的组件实现登陆表单界面
