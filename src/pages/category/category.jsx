@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import {
-  Card,
-  Button,
-  Icon,
+  Card, 
+  Button, 
+  Icon, 
   Table,
   message,
   Modal
@@ -39,7 +39,7 @@ export default class Category extends Component {
         width: 300,
         render: (category) => <LinkButton onClick={() => {
           this.category = category // 保存当前分类, 其它地方都可以读取到
-          this.setState({ showStatus: 2 })
+          this.setState({ showStatus: 2})
         }}>修改分类</LinkButton>
       },
     ]
@@ -48,14 +48,14 @@ export default class Category extends Component {
   /* 
     异步获取分类列表显示
   */
-  getCategorys = async () => {
+  getCategorys  = async () => {
     // 显示loading
     this.setState({ loading: true })
     // 发异步ajax请求
     const result = await reqCategorys()
     // 隐藏loading
     this.setState({ loading: false })
-    if (result.status === 0) { // 成功了
+    if (result.status===0) { // 成功了
       // 取出分类列表
       const categorys = result.data
       // 更新状态categorys数据
@@ -78,9 +78,9 @@ export default class Category extends Component {
         // 验证通过后, 得到输入数据
         const { categoryName } = values
 
-        const { showStatus } = this.state
+        const {showStatus} = this.state
         let result
-        if (showStatus === 1) { // 添加
+        if (showStatus===1) { // 添加
           // 发添加分类的请求
           result = await reqAddCategory(categoryName)
         } else { // 修改
@@ -91,9 +91,9 @@ export default class Category extends Component {
         this.form.resetFields() // 重置输入数据(变成了初始值)
         this.setState({ showStatus: 0 })
 
-        const action = showStatus === 1 ? '添加' : '修改'
+        const action = showStatus===1 ? '添加' : '修改'
         // 根据响应结果, 做不同处理
-        if (result.status === 0) {
+        if (result.status===0) {
           // 重新获取分类列表显示
           this.getCategorys()
           message.success(action + '分类成功')
@@ -115,12 +115,12 @@ export default class Category extends Component {
   }
 
 
-  componentWillMount() {
+  componentWillMount () {
 
     this.initColumns()
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.getCategorys()
 
   }
@@ -135,34 +135,34 @@ export default class Category extends Component {
 
     // Card右上角的结构
     const extra = (
-      <Button type="primary" onClick={() => {
+      <Button type="primary" onClick={() => { 
         this.category = null
         this.setState({ showStatus: 1 })
-      }}>
-        <Icon type="plus" />
+       }}>
+        <Icon type="plus"/>
         添加
       </Button>
     )
 
     return (
       <Card extra={extra}>
-        <Table
+        <Table 
           bordered={true}
           rowKey="_id"
           loading={loading}
           columns={this.columns}
           dataSource={categorys}
-          pagination={{ defaultPageSize: 6, showQuickJumper: true }}
+          pagination={{ defaultPageSize: 6, showQuickJumper: true}}
         />
 
         <Modal
           title={showStatus === 1 ? "添加分类" : "修改分类"}
-          visible={showStatus !== 0}
+          visible={showStatus!==0}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
         >
           {/* 将子组件传递过来的form对象保存到当前组件对象上 */}
-          <AddUpdateForm setForm={form => this.form = form} categoryName={category.name} />
+          <AddUpdateForm setForm={form => this.form = form} categoryName={category.name}/>
         </Modal>
       </Card>
     )

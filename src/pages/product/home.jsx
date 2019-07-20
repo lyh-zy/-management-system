@@ -17,10 +17,11 @@ import memoryUtils from '../../utils/memoryUtils';
 const Option = Select.Option
 /* 
 商品管理的首页组件
-*/  export default class ProductHome extends Component {
+*/
+export default class ProductHome extends Component {
   
   state = {
-    loading: false, 
+    loading: false,
     products: [], // 商品列表
     total: 0, // 商品的总数量
     searchType: 'productName', // 默认是按商品名称搜索
