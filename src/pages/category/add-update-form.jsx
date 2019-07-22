@@ -12,7 +12,7 @@ const Item = Form.Item
 /* 
 添加/修改分类的Form组件
 */
-class AddUpdateForm extends Component {
+class AddUp                                                                                                        Form extends Component {
 
   static propTypes = {
     setForm: PropTypes.func.isRequired,
