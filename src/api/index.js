@@ -83,6 +83,7 @@ export const reqSearchProducts = ({
   }
 })
 
+<<<<<<< HEAD
 /* 根据商品ID获取商品 */
 export const reqProduct = (productId) => ajax(BASE + '/manage/product/info', {
   params: { 
@@ -90,6 +91,8 @@ export const reqProduct = (productId) => ajax(BASE + '/manage/product/info', {
   }
 })
 
+=======
+>>>>>>> bfece0691d2ad75e5ebeffab74fb870910a4e856
 /* 对商品进行上架/下架处理 */
 export const reqUpdateStatus = (productId, status) => ajax(BASE + '/manage/product/updateStatus', {
   method: 'POST',
@@ -99,6 +102,7 @@ export const reqUpdateStatus = (productId, status) => ajax(BASE + '/manage/produ
   }
 })
 
+<<<<<<< HEAD
 /* 删除图片 */
 export const reqDeleteImg = (name) => ajax.post(BASE + '/manage/img/delete', {name})
 
@@ -125,3 +129,9 @@ export const reqDeleteUser = (userId) => ajax.post(BASE + '/manage/user/delete',
 })
 // 添加/更新用户
 export const reqAddOrUpdateUser = (user) => ajax.post(BASE + '/manage/user/' + (user._id ? 'update' : 'add'), user)
+=======
+/* ajax.post(BASE + '/manage/product/updateStatus', {
+  productId,
+  status
+}) */
+>>>>>>> bfece0691d2ad75e5ebeffab74fb870910a4e856
